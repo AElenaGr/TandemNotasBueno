@@ -1,38 +1,83 @@
+/* Estilos para Tandem Notas */
+
 body {
   font-family: Arial, sans-serif;
-  background-color: #f5f5dc; /* Amarillo claro */
-  padding: 20px;
+  margin: 0; /* Elimina el margen predeterminado del body */
+  padding: 20px; /* Añade padding para separar el contenido del borde */
 }
 
 h1 {
-  color: #333;
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px; /* Añade espacio entre el título y el contenido */
 }
 
-input[type="text"] {
-  width: 100%;
+.container {
+  display: flex;
+  flex-direction: column; /* Organiza los elementos verticalmente */
+  width: 600px; /* Define el ancho del contenedor */
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+  padding: 20px;
+  border: 1px solid #ddd; /* Añade un borde para delimitar el contenedor */
+  border-radius: 5px; /* Aplica bordes redondeados */
+}
+
+.nota {
   padding: 10px;
-  margin-bottom: 10px;
+  border: 1px solid #ccc; /* Añade un borde al div de la nota */
+  border-radius: 5px; /* Aplica bordes redondeados */
+  min-height: 100px; /* Define una altura mínima para la nota */
 }
 
 button {
   padding: 10px 20px;
-  background-color: #ffcc00; /* Amarillo */
+  margin: 5px; /* Añade margen entre los botones */
   border: none;
-  color: #333;
+  border-radius: 5px; /* Aplica bordes redondeados a los botones */
   cursor: pointer;
 }
 
-button:hover {
-  background-color: #ffdb4d; /* Amarillo más claro al pasar el ratón */
+#btn-add-nota {
+  background-color: #007bff; /* Azul */
+  color: white;
 }
 
-ul {
-  list-style-type: none;
-  padding: 0;
+#btn-clean-nota {
+  background-color: #dc3545; /* Rojo */
+  color: white;
 }
 
-li {
-  background-color: #fff; /* Blanco */
+#show-notas {
+  margin-top: 20px; /* Añade margen superior a la sección de notas */
   padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.no-nota {
+  text-align: center;
+  color: #ccc; /* Color gris claro para el texto sin notas */
+}
+
+.lista-notas { /* Clase para las notas guardadas (añadida) */
   margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f8f8f8; /* Gris claro para las notas */
+}
+
+label {
+  margin-top: 20px; /* Añade margen superior a la etiqueta de fecha y hora */
+  display: block; /* Muestra la etiqueta en una línea propia */
+}
+
+#datetime-input {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#mostrar-notas { /* Elemento oculto para mostrar notas (opcional) */
+  display: none; /* Oculta el elemento por defecto */
 }
